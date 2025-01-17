@@ -1,6 +1,7 @@
 #include "Graph.h"
 #include <iostream>
 #include <climits>
+#include "Utils.h"
 using namespace std;
 
 void bellmanFord(const Graph &graph, int startNode)
@@ -34,4 +35,6 @@ void bellmanFord(const Graph &graph, int startNode)
             }
         }
     }
+
+    printResults("Bellman-Ford Algorithm", startNode, distances);
 }
