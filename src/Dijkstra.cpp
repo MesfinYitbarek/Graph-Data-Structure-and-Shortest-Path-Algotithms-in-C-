@@ -8,7 +8,7 @@ using namespace std;
 void dijkstra(const Graph& graph, int startNode) {
     int numberOfNodes = graph.getAdjList().size();
     vector<int> distances(numberOfNodes, INT_MAX); 
-    
+
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> minHeap;
 
     distances[startNode] = 0;
@@ -31,5 +31,7 @@ void dijkstra(const Graph& graph, int startNode) {
             }
         }
     }
+
+     printResults("Dijkstra's Algorithm", startNode, distances);
 
 }
